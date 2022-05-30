@@ -27,7 +27,7 @@ Open URL Locally
 Open Browser To URL
     # Open Browser    http://localhost:8080/    browser=chrome
     Go To             http://localhost:8080/
-    Maximize Browser Window
+    # Maximize Browser Window
 
 Log In As User
     Click Element    xpath:/html/body/header/a[2]
