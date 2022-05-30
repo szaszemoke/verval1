@@ -23,7 +23,7 @@ jobs:
       architecture: 'x64'
     displayName: 'Use Python $(python.version)'
 
-  - script: pip install robotframework robotframework-seleniumlibrary && npm i chromedriver --chromedriver_version=LATEST --save-dev
+  - script: pip install robotframework robotframework-seleniumlibrary && npm i chromedriver --chromedriver_version=99.0.4844.51
     displayName: 'Install dependencies'
 
   - powershell: robot --pythonpath . ./*/*.robot
