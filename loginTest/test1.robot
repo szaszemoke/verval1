@@ -26,7 +26,7 @@ Open URL Locally
 
 Open Browser To URL
     # Open Browser    http://localhost:8080/    browser=chrome
-    Go To             http://localhost:8080/
+    Go To             https://www.youtube.com/
     # Maximize Browser Window
 
 Log In As User
