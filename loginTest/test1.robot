@@ -1,5 +1,6 @@
 *** Settings ***
 Library           SeleniumLibrary
+Suite Setup       Open URL Locally
 
 *** Variables ***
 ${USERNAME1}    felhasznalo
@@ -15,8 +16,17 @@ Log In A User
     Close Browser
 
 *** Keywords ***
+Open URL Locally
+    # Open Webdriver hosted on Azure Devops
+    Create Webdriver    Chrome    executable_path=D:/a/1/s/node_modules/chromedriver/lib/chromedriver/chromedriver.exe
+    
+    # Open Browser on Local Machine
+    # Open Browser    https://www.autohero.com/de/search/    chrome
+    Maximize Browser Window
+
 Open Browser To URL
-    Open Browser    http://localhost:8080/    browser=chrome
+    # Open Browser    http://localhost:8080/    browser=chrome
+    Go To             http://localhost:8080/
     Maximize Browser Window
 
 Log In As User
