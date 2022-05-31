@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220531 03:38:01.063" rpa="false" schemaversion="3">
+<suite id="s1" name="Test2" source="C:\Users\szasz\Desktop\Ver&amp;val\vizsga\saját projekt\testRegistration\test2.robot">
+<kw name="Open browser to URL" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:8080/</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220531 03:38:01.465" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20220531 03:38:01.465" endtime="20220531 03:38:06.309"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220531 03:38:06.309" endtime="20220531 03:38:06.589"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:01.465" endtime="20220531 03:38:06.589"/>
+</kw>
+<test id="s1-t1" name="Üres név1" line="10">
+<kw name="Registration Should Fail When">
+<arg>${EMPTY}</arg>
+<arg>Emőke</arg>
+<arg>emoke@gmail.com</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:06.605" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:06.605" endtime="20220531 03:38:07.074"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:07.074" level="INFO">Clicking element '//*[@id="main"]/article/div/a'.</msg>
+<status status="PASS" starttime="20220531 03:38:07.074" endtime="20220531 03:38:07.357"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:07.357" level="INFO">Typing text '' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:38:07.357" endtime="20220531 03:38:07.529"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:07.529" level="INFO">Typing text 'Emőke' into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:07.529" endtime="20220531 03:38:07.709"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:07.709" level="INFO">Typing text 'emoke@gmail.com' into text field '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:38:07.709" endtime="20220531 03:38:07.917"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[4]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:07.917" level="INFO">Typing text 'emoke' into text field '//*[@id="main"]/article/form/input[4]'.</msg>
+<status status="PASS" starttime="20220531 03:38:07.917" endtime="20220531 03:38:08.088"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[5]</arg>
+<arg>${password1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:08.088" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[5]'.</msg>
+<msg timestamp="20220531 03:38:08.171" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:08.256" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:08.088" endtime="20220531 03:38:08.256"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[6]</arg>
+<arg>${password2}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:08.256" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[6]'.</msg>
+<msg timestamp="20220531 03:38:08.341" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:08.451" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:08.256" endtime="20220531 03:38:08.451"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:08.451" level="INFO">Clicking element '//*[@id="main"]/article/form/input[7]'.</msg>
+<status status="PASS" starttime="20220531 03:38:08.451" endtime="20220531 03:38:08.655"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div</arg>
+<arg>Hiba</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220531 03:38:08.706" level="INFO">Element '//*[@id="main"]/article/div' contains text 'Hiba'.</msg>
+<status status="PASS" starttime="20220531 03:38:08.655" endtime="20220531 03:38:08.714"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:06.605" endtime="20220531 03:38:08.715"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:06.589" endtime="20220531 03:38:08.715"/>
+</test>
+<test id="s1-t2" name="Üres név2" line="11">
+<kw name="Registration Should Fail When">
+<arg>Szász</arg>
+<arg>${EMPTY}</arg>
+<arg>emoke@gmail.com</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:08.716" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:08.716" endtime="20220531 03:38:08.865"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:08.865" level="INFO">Clicking element '//*[@id="main"]/article/div/a'.</msg>
+<status status="PASS" starttime="20220531 03:38:08.865" endtime="20220531 03:38:09.083"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:09.083" level="INFO">Typing text 'Szász' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:38:09.083" endtime="20220531 03:38:09.216"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:09.216" level="INFO">Typing text '' into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:09.216" endtime="20220531 03:38:09.312"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:09.312" level="INFO">Typing text 'emoke@gmail.com' into text field '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:38:09.312" endtime="20220531 03:38:09.451"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[4]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:09.451" level="INFO">Typing text 'emoke' into text field '//*[@id="main"]/article/form/input[4]'.</msg>
+<status status="PASS" starttime="20220531 03:38:09.451" endtime="20220531 03:38:09.594"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[5]</arg>
+<arg>${password1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:09.594" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[5]'.</msg>
+<msg timestamp="20220531 03:38:09.658" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:09.755" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:09.594" endtime="20220531 03:38:09.755"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[6]</arg>
+<arg>${password2}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:09.755" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[6]'.</msg>
+<msg timestamp="20220531 03:38:09.818" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:09.893" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:09.755" endtime="20220531 03:38:09.893"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:09.893" level="INFO">Clicking element '//*[@id="main"]/article/form/input[7]'.</msg>
+<status status="PASS" starttime="20220531 03:38:09.893" endtime="20220531 03:38:10.042"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div</arg>
+<arg>Hiba</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220531 03:38:10.090" level="INFO">Element '//*[@id="main"]/article/div' contains text 'Hiba'.</msg>
+<status status="PASS" starttime="20220531 03:38:10.042" endtime="20220531 03:38:10.090"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:08.716" endtime="20220531 03:38:10.090"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:08.716" endtime="20220531 03:38:10.090"/>
+</test>
+<test id="s1-t3" name="Üres email" line="12">
+<kw name="Registration Should Fail When">
+<arg>Szász</arg>
+<arg>Emőke</arg>
+<arg>${EMPTY}</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:10.101" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:10.101" endtime="20220531 03:38:10.261"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:10.261" level="INFO">Clicking element '//*[@id="main"]/article/div/a'.</msg>
+<status status="PASS" starttime="20220531 03:38:10.261" endtime="20220531 03:38:10.442"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:10.442" level="INFO">Typing text 'Szász' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:38:10.442" endtime="20220531 03:38:10.569"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:10.569" level="INFO">Typing text 'Emőke' into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:10.569" endtime="20220531 03:38:10.681"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:10.681" level="INFO">Typing text '' into text field '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:38:10.681" endtime="20220531 03:38:10.781"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[4]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:10.781" level="INFO">Typing text 'emoke' into text field '//*[@id="main"]/article/form/input[4]'.</msg>
+<status status="PASS" starttime="20220531 03:38:10.781" endtime="20220531 03:38:10.922"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[5]</arg>
+<arg>${password1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:10.922" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[5]'.</msg>
+<msg timestamp="20220531 03:38:10.986" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:11.089" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:10.922" endtime="20220531 03:38:11.089"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[6]</arg>
+<arg>${password2}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:11.089" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[6]'.</msg>
+<msg timestamp="20220531 03:38:11.168" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:11.259" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:11.089" endtime="20220531 03:38:11.259"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:11.259" level="INFO">Clicking element '//*[@id="main"]/article/form/input[7]'.</msg>
+<status status="PASS" starttime="20220531 03:38:11.259" endtime="20220531 03:38:11.411"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div</arg>
+<arg>Hiba</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220531 03:38:11.459" level="INFO">Element '//*[@id="main"]/article/div' contains text 'Hiba'.</msg>
+<status status="PASS" starttime="20220531 03:38:11.411" endtime="20220531 03:38:11.459"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:10.101" endtime="20220531 03:38:11.459"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:10.101" endtime="20220531 03:38:11.459"/>
+</test>
+<test id="s1-t4" name="Üres felasználóhnév" line="13">
+<kw name="Registration Should Fail When">
+<arg>Szász</arg>
+<arg>Emőke</arg>
+<arg>emoke@gmail.com</arg>
+<arg>${EMPTY}</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:11.467" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:11.467" endtime="20220531 03:38:11.603"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:11.611" level="INFO">Clicking element '//*[@id="main"]/article/div/a'.</msg>
+<status status="PASS" starttime="20220531 03:38:11.611" endtime="20220531 03:38:11.795"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:11.795" level="INFO">Typing text 'Szász' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:38:11.795" endtime="20220531 03:38:11.922"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:11.922" level="INFO">Typing text 'Emőke' into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:11.922" endtime="20220531 03:38:12.038"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:12.046" level="INFO">Typing text 'emoke@gmail.com' into text field '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:38:12.038" endtime="20220531 03:38:12.221"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[4]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:12.221" level="INFO">Typing text '' into text field '//*[@id="main"]/article/form/input[4]'.</msg>
+<status status="PASS" starttime="20220531 03:38:12.221" endtime="20220531 03:38:12.390"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[5]</arg>
+<arg>${password1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:12.390" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[5]'.</msg>
+<msg timestamp="20220531 03:38:12.453" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:12.528" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:12.390" endtime="20220531 03:38:12.528"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[6]</arg>
+<arg>${password2}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:12.528" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[6]'.</msg>
+<msg timestamp="20220531 03:38:12.568" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:12.637" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:12.528" endtime="20220531 03:38:12.637"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:12.637" level="INFO">Clicking element '//*[@id="main"]/article/form/input[7]'.</msg>
+<status status="PASS" starttime="20220531 03:38:12.637" endtime="20220531 03:38:12.775"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div</arg>
+<arg>Hiba</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220531 03:38:12.815" level="INFO">Element '//*[@id="main"]/article/div' contains text 'Hiba'.</msg>
+<status status="PASS" starttime="20220531 03:38:12.775" endtime="20220531 03:38:12.815"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:11.459" endtime="20220531 03:38:12.815"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:11.459" endtime="20220531 03:38:12.823"/>
+</test>
+<test id="s1-t5" name="Üres jelszó1" line="14">
+<kw name="Registration Should Fail When">
+<arg>Szász</arg>
+<arg>Emőke</arg>
+<arg>emoke@gmail.com</arg>
+<arg>emoke</arg>
+<arg>${EMPTY}</arg>
+<arg>emoke</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:12.823" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:12.823" endtime="20220531 03:38:12.967"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:12.967" level="INFO">Clicking element '//*[@id="main"]/article/div/a'.</msg>
+<status status="PASS" starttime="20220531 03:38:12.967" endtime="20220531 03:38:13.136"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:13.144" level="INFO">Typing text 'Szász' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:38:13.136" endtime="20220531 03:38:13.270"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:13.270" level="INFO">Typing text 'Emőke' into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:13.270" endtime="20220531 03:38:13.411"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:13.411" level="INFO">Typing text 'emoke@gmail.com' into text field '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:38:13.411" endtime="20220531 03:38:13.634"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[4]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:13.634" level="INFO">Typing text 'emoke' into text field '//*[@id="main"]/article/form/input[4]'.</msg>
+<status status="PASS" starttime="20220531 03:38:13.634" endtime="20220531 03:38:13.817"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[5]</arg>
+<arg>${password1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:13.817" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[5]'.</msg>
+<msg timestamp="20220531 03:38:13.868" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:13.919" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:13.817" endtime="20220531 03:38:13.919"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[6]</arg>
+<arg>${password2}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:13.919" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[6]'.</msg>
+<msg timestamp="20220531 03:38:13.968" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:14.040" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:13.919" endtime="20220531 03:38:14.040"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:14.040" level="INFO">Clicking element '//*[@id="main"]/article/form/input[7]'.</msg>
+<status status="PASS" starttime="20220531 03:38:14.040" endtime="20220531 03:38:14.196"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div</arg>
+<arg>Hiba</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220531 03:38:14.236" level="INFO">Element '//*[@id="main"]/article/div' contains text 'Hiba'.</msg>
+<status status="PASS" starttime="20220531 03:38:14.196" endtime="20220531 03:38:14.236"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:12.823" endtime="20220531 03:38:14.236"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:12.823" endtime="20220531 03:38:14.236"/>
+</test>
+<test id="s1-t6" name="Üres jelszó2" line="15">
+<kw name="Registration Should Fail When">
+<arg>Szász</arg>
+<arg>Emőke</arg>
+<arg>emoke@gmail.com</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<arg>${EMPTY}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:14.244" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:14.244" endtime="20220531 03:38:14.396"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:14.404" level="INFO">Clicking element '//*[@id="main"]/article/div/a'.</msg>
+<status status="PASS" starttime="20220531 03:38:14.396" endtime="20220531 03:38:14.592"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:14.592" level="INFO">Typing text 'Szász' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:38:14.592" endtime="20220531 03:38:14.746"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:14.746" level="INFO">Typing text 'Emőke' into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:14.746" endtime="20220531 03:38:14.894"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:14.894" level="INFO">Typing text 'emoke@gmail.com' into text field '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:38:14.894" endtime="20220531 03:38:15.101"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[4]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:15.101" level="INFO">Typing text 'emoke' into text field '//*[@id="main"]/article/form/input[4]'.</msg>
+<status status="PASS" starttime="20220531 03:38:15.101" endtime="20220531 03:38:15.223"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[5]</arg>
+<arg>${password1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:15.223" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[5]'.</msg>
+<msg timestamp="20220531 03:38:15.271" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:15.338" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:15.223" endtime="20220531 03:38:15.338"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[6]</arg>
+<arg>${password2}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:15.338" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[6]'.</msg>
+<msg timestamp="20220531 03:38:15.386" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:15.436" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:15.338" endtime="20220531 03:38:15.436"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:15.436" level="INFO">Clicking element '//*[@id="main"]/article/form/input[7]'.</msg>
+<status status="PASS" starttime="20220531 03:38:15.436" endtime="20220531 03:38:15.581"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div</arg>
+<arg>Hiba</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220531 03:38:15.621" level="INFO">Element '//*[@id="main"]/article/div' contains text 'Hiba'.</msg>
+<status status="PASS" starttime="20220531 03:38:15.581" endtime="20220531 03:38:15.621"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:14.244" endtime="20220531 03:38:15.621"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:14.244" endtime="20220531 03:38:15.621"/>
+</test>
+<test id="s1-t7" name="Különböző jelszavak" line="16">
+<kw name="Registration Should Fail When">
+<arg>Szász</arg>
+<arg>Emőke</arg>
+<arg>emoke@gmail.com</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<arg>emoke1</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:15.621" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:15.621" endtime="20220531 03:38:15.806"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:15.814" level="INFO">Clicking element '//*[@id="main"]/article/div/a'.</msg>
+<status status="PASS" starttime="20220531 03:38:15.806" endtime="20220531 03:38:15.967"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:15.967" level="INFO">Typing text 'Szász' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:38:15.967" endtime="20220531 03:38:16.119"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:16.119" level="INFO">Typing text 'Emőke' into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:16.119" endtime="20220531 03:38:16.289"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:16.289" level="INFO">Typing text 'emoke@gmail.com' into text field '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:38:16.289" endtime="20220531 03:38:16.485"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[4]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:16.485" level="INFO">Typing text 'emoke' into text field '//*[@id="main"]/article/form/input[4]'.</msg>
+<status status="PASS" starttime="20220531 03:38:16.485" endtime="20220531 03:38:16.599"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[5]</arg>
+<arg>${password1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:16.599" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[5]'.</msg>
+<msg timestamp="20220531 03:38:16.651" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:16.723" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:16.599" endtime="20220531 03:38:16.723"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[6]</arg>
+<arg>${password2}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:16.723" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[6]'.</msg>
+<msg timestamp="20220531 03:38:16.771" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:16.841" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:16.723" endtime="20220531 03:38:16.841"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:16.841" level="INFO">Clicking element '//*[@id="main"]/article/form/input[7]'.</msg>
+<status status="PASS" starttime="20220531 03:38:16.841" endtime="20220531 03:38:17.034"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div</arg>
+<arg>Hiba</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220531 03:38:17.082" level="INFO">Element '//*[@id="main"]/article/div' contains text 'Hiba'.</msg>
+<status status="PASS" starttime="20220531 03:38:17.034" endtime="20220531 03:38:17.082"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:15.621" endtime="20220531 03:38:17.082"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:15.621" endtime="20220531 03:38:17.082"/>
+</test>
+<test id="s1-t8" name="Létező felhasználónév" line="17">
+<kw name="Registration Should Fail When">
+<arg>Szász</arg>
+<arg>Emőke</arg>
+<arg>emoke@gmail.com</arg>
+<arg>felhasznalo</arg>
+<arg>emoke</arg>
+<arg>emoke</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:17.082" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:17.082" endtime="20220531 03:38:17.242"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:17.242" level="INFO">Clicking element '//*[@id="main"]/article/div/a'.</msg>
+<status status="PASS" starttime="20220531 03:38:17.242" endtime="20220531 03:38:17.441"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:17.441" level="INFO">Typing text 'Szász' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:38:17.441" endtime="20220531 03:38:17.604"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:17.604" level="INFO">Typing text 'Emőke' into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<status status="PASS" starttime="20220531 03:38:17.604" endtime="20220531 03:38:17.758"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:17.758" level="INFO">Typing text 'emoke@gmail.com' into text field '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:38:17.758" endtime="20220531 03:38:17.892"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[4]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:17.892" level="INFO">Typing text 'felhasznalo' into text field '//*[@id="main"]/article/form/input[4]'.</msg>
+<status status="PASS" starttime="20220531 03:38:17.892" endtime="20220531 03:38:18.073"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[5]</arg>
+<arg>${password1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:18.073" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[5]'.</msg>
+<msg timestamp="20220531 03:38:18.121" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:18.186" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:18.073" endtime="20220531 03:38:18.186"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[6]</arg>
+<arg>${password2}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:18.186" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[6]'.</msg>
+<msg timestamp="20220531 03:38:18.234" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:38:18.301" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:38:18.186" endtime="20220531 03:38:18.301"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[7]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:38:18.301" level="INFO">Clicking element '//*[@id="main"]/article/form/input[7]'.</msg>
+<status status="PASS" starttime="20220531 03:38:18.301" endtime="20220531 03:38:18.442"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div</arg>
+<arg>Hiba</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220531 03:38:18.787" level="INFO">Element '//*[@id="main"]/article/div' contains text 'Hiba'.</msg>
+<status status="PASS" starttime="20220531 03:38:18.442" endtime="20220531 03:38:18.787"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:17.082" endtime="20220531 03:38:18.787"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:17.082" endtime="20220531 03:38:18.795"/>
+</test>
+<kw name="Close the browser" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220531 03:38:18.797" endtime="20220531 03:38:21.623"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:18.797" endtime="20220531 03:38:21.623"/>
+</kw>
+<status status="PASS" starttime="20220531 03:38:01.079" endtime="20220531 03:38:21.623"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Test2">Test2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

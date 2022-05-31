@@ -26,5 +26,5 @@ jobs:
   - script: pip install robotframework robotframework-seleniumlibrary && npm install chromedriver --detect_chromedriver_version
     displayName: 'Install dependencies'
 
-  - powershell: robot --pythonpath . ./*/*.robot
+  - powershell: robot --pythonpath . ./other/*/*.robot
     displayName: 'Run Robot Scripts'

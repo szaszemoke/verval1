@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220531 03:04:13.865" rpa="false" schemaversion="3">
+<suite id="s1" name="Test1" source="C:\Users\szasz\Desktop\Ver&amp;val\vizsga\testBookLending\test1.robot">
+<kw name="Open browser to URL" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:8080/</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220531 03:04:14.314" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20220531 03:04:14.314" endtime="20220531 03:04:20.994"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220531 03:04:20.994" endtime="20220531 03:04:21.217"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:14.314" endtime="20220531 03:04:21.217"/>
+</kw>
+<test id="s1-t1" name="Lend a book" line="23">
+<kw name="Log in ${USERNAME1} ${PASSWORD1}" sourcename="Log in ${username} ${password}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:21.228" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:04:21.228" endtime="20220531 03:04:21.574"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:21.574" level="INFO">Typing text 'felhasznalo' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:04:21.574" endtime="20220531 03:04:21.789"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:21.789" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<msg timestamp="20220531 03:04:21.864" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:04:21.931" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:04:21.789" endtime="20220531 03:04:21.931"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:21.931" level="INFO">Clicking element '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:04:21.931" endtime="20220531 03:04:22.256"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:21.228" endtime="20220531 03:04:22.256"/>
+</kw>
+<kw name="Lend book with isbn ${ISBN1}" sourcename="Lend book with isbn ${isbn}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:22.264" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:04:22.264" endtime="20220531 03:04:22.464"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>//*[@id="isbn"]</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20220531 03:04:22.472" level="INFO">Simulating Mouse Down on element '//*[@id="isbn"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:22.464" endtime="20220531 03:04:22.810"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="isbn"]/option</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220531 03:04:22.810" endtime="20220531 03:04:22.874"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>//*[@id="isbn"]</arg>
+<arg>${isbn}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220531 03:04:22.874" level="INFO">Selecting options from selection list '//*[@id="isbn"]' by value 1000000000123.</msg>
+<status status="PASS" starttime="20220531 03:04:22.874" endtime="20220531 03:04:22.970"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="kuldes"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:22.978" level="INFO">Clicking element '//*[@id="kuldes"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:22.978" endtime="20220531 03:04:23.175"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:22.264" endtime="20220531 03:04:23.175"/>
+</kw>
+<kw name="Check if has lending with isbn ${ISBN1}" sourcename="Check if has lending with isbn ${isbn}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaGomb"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:23.183" level="INFO">Clicking element '//*[@id="lenyiloListaGomb"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:23.183" endtime="20220531 03:04:23.255"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220531 03:04:23.255" endtime="20220531 03:04:23.295"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:23.295" level="INFO">Clicking element '//*[@id="lenyiloListaElem"]/a[1]'.</msg>
+<status status="PASS" starttime="20220531 03:04:23.295" endtime="20220531 03:04:23.441"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="${isbn}"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220531 03:04:23.457" level="INFO">Current page contains element '//*[@id="1000000000123"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:23.441" endtime="20220531 03:04:23.457"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:23.183" endtime="20220531 03:04:23.457"/>
+</kw>
+<kw name="Log out">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaGomb"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:23.457" level="INFO">Clicking element '//*[@id="lenyiloListaGomb"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:23.457" endtime="20220531 03:04:23.513"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220531 03:04:23.513" endtime="20220531 03:04:23.537"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:23.537" level="INFO">Clicking element '//*[@id="lenyiloListaElem"]/a[4]'.</msg>
+<status status="PASS" starttime="20220531 03:04:23.537" endtime="20220531 03:04:23.711"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:23.457" endtime="20220531 03:04:23.711"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:21.225" endtime="20220531 03:04:23.719"/>
+</test>
+<test id="s1-t2" name="Return a book" line="29">
+<kw name="Log in ${USERNAME1} ${PASSWORD1}" sourcename="Log in ${username} ${password}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:23.719" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:04:23.719" endtime="20220531 03:04:23.903"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:23.903" level="INFO">Typing text 'felhasznalo' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:04:23.903" endtime="20220531 03:04:24.054"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:24.054" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<msg timestamp="20220531 03:04:24.117" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:04:24.238" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:04:24.054" endtime="20220531 03:04:24.238"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:24.246" level="INFO">Clicking element '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:04:24.238" endtime="20220531 03:04:24.534"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:23.719" endtime="20220531 03:04:24.534"/>
+</kw>
+<kw name="Return book with isbn ${ISBN1}" sourcename="Return book with isbn ${isbn}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:24.534" level="INFO">Clicking element 'xpath:/html/body/header/a[3]'.</msg>
+<status status="PASS" starttime="20220531 03:04:24.534" endtime="20220531 03:04:24.734"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>//*[@id="isbn"]</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20220531 03:04:24.734" level="INFO">Simulating Mouse Down on element '//*[@id="isbn"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:24.734" endtime="20220531 03:04:25.151"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="isbn"]/option</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220531 03:04:25.151" endtime="20220531 03:04:25.248"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>//*[@id="isbn"]</arg>
+<arg>${isbn}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220531 03:04:25.256" level="INFO">Selecting options from selection list '//*[@id="isbn"]' by value 1000000000123.</msg>
+<status status="PASS" starttime="20220531 03:04:25.248" endtime="20220531 03:04:25.343"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="kuldes"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:25.343" level="INFO">Clicking element '//*[@id="kuldes"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:25.343" endtime="20220531 03:04:25.573"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:24.534" endtime="20220531 03:04:25.573"/>
+</kw>
+<kw name="Check if doesn't have lending">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaGomb"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:25.581" level="INFO">Clicking element '//*[@id="lenyiloListaGomb"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:25.573" endtime="20220531 03:04:25.663"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220531 03:04:25.663" endtime="20220531 03:04:25.697"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:25.697" level="INFO">Clicking element '//*[@id="lenyiloListaElem"]/a[1]'.</msg>
+<status status="PASS" starttime="20220531 03:04:25.697" endtime="20220531 03:04:25.836"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/div/p[1]</arg>
+<arg>Ön jelenleg egy könyvet sem kölcsönöz.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220531 03:04:25.876" level="INFO">Element '//*[@id="main"]/article/div/p[1]' contains text 'Ön jelenleg egy könyvet sem kölcsönöz.'.</msg>
+<status status="PASS" starttime="20220531 03:04:25.836" endtime="20220531 03:04:25.876"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:25.573" endtime="20220531 03:04:25.876"/>
+</kw>
+<kw name="Log out">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaGomb"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:25.876" level="INFO">Clicking element '//*[@id="lenyiloListaGomb"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:25.876" endtime="20220531 03:04:25.933"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220531 03:04:25.933" endtime="20220531 03:04:25.965"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:25.965" level="INFO">Clicking element '//*[@id="lenyiloListaElem"]/a[4]'.</msg>
+<status status="PASS" starttime="20220531 03:04:25.965" endtime="20220531 03:04:26.147"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:25.876" endtime="20220531 03:04:26.147"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:23.719" endtime="20220531 03:04:26.147"/>
+</test>
+<test id="s1-t3" name="Add a book to store" line="35">
+<kw name="Log in ${USERNAME2} ${PASSWORD2}" sourcename="Log in ${username} ${password}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:26.155" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:04:26.155" endtime="20220531 03:04:26.347"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:26.347" level="INFO">Typing text 'admin' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:04:26.347" endtime="20220531 03:04:26.478"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:26.486" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<msg timestamp="20220531 03:04:26.534" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:04:26.589" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:04:26.478" endtime="20220531 03:04:26.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:26.589" level="INFO">Clicking element '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:04:26.589" endtime="20220531 03:04:26.933"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:26.155" endtime="20220531 03:04:26.933"/>
+</kw>
+<kw name="Add a book">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:26.933" level="INFO">Clicking element 'xpath:/html/body/header/a[4]'.</msg>
+<status status="PASS" starttime="20220531 03:04:26.933" endtime="20220531 03:04:27.182"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="isbn"]</arg>
+<arg>${ISBN2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:27.182" level="INFO">Typing text '1234567890' into text field '//*[@id="isbn"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:27.182" endtime="20220531 03:04:27.325"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cim"]</arg>
+<arg>${TITLE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:27.325" level="INFO">Typing text 'Narnia krónikái: A végső ütközet' into text field '//*[@id="cim"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:27.325" endtime="20220531 03:04:27.523"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="szerzo"]</arg>
+<arg>${AUTHOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:27.531" level="INFO">Typing text 'Clive Staples Lewis' into text field '//*[@id="szerzo"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:27.531" endtime="20220531 03:04:27.672"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="kiadasiev"]</arg>
+<arg>${YEAR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:27.672" level="INFO">Typing text '1955' into text field '//*[@id="kiadasiev"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:27.672" endtime="20220531 03:04:27.785"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="osszefoglalo"]</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:27.785" level="INFO">Typing text 'Kedves kis könyv. :)' into text field '//*[@id="osszefoglalo"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:27.785" endtime="20220531 03:04:27.957"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>//*[@id="kategoria"]</arg>
+<arg>${CATEGORY}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220531 03:04:27.957" level="INFO">Selecting options from selection list '//*[@id="kategoria"]' by value 1.</msg>
+<status status="PASS" starttime="20220531 03:04:27.957" endtime="20220531 03:04:28.185"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>//*[@id="boritokep"]</arg>
+<arg>${FILE_PATH}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20220531 03:04:28.185" level="INFO">Sending C:\Users\szasz\Desktop\Ver&amp;val\vizsga\testBookLending\Narnia.jpg to browser.</msg>
+<status status="PASS" starttime="20220531 03:04:28.185" endtime="20220531 03:04:28.240"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="peldanyszam"]</arg>
+<arg>${NR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:28.240" level="INFO">Typing text '2' into text field '//*[@id="peldanyszam"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:28.240" endtime="20220531 03:04:28.334"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="kuldes"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:28.334" level="INFO">Clicking element '//*[@id="kuldes"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:28.334" endtime="20220531 03:04:28.621"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:26.933" endtime="20220531 03:04:28.621"/>
+</kw>
+<kw name="Check if result contains book with isbn ${ISBN2}" sourcename="Check if result contains book with isbn ${isbn}">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id=${isbn}]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220531 03:04:28.685" level="INFO">Current page contains element '//*[@id=1234567890]'.</msg>
+<status status="PASS" starttime="20220531 03:04:28.621" endtime="20220531 03:04:28.685"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:28.621" endtime="20220531 03:04:28.685"/>
+</kw>
+<kw name="Log out">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaGomb"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:28.685" level="INFO">Clicking element '//*[@id="lenyiloListaGomb"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:28.685" endtime="20220531 03:04:28.775"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220531 03:04:28.775" endtime="20220531 03:04:28.799"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:28.799" level="INFO">Clicking element '//*[@id="lenyiloListaElem"]/a[4]'.</msg>
+<status status="PASS" starttime="20220531 03:04:28.799" endtime="20220531 03:04:29.002"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:28.685" endtime="20220531 03:04:29.010"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:26.147" endtime="20220531 03:04:29.010"/>
+</test>
+<test id="s1-t4" name="Search by title" line="41">
+<kw name="Log in ${USERNAME2} ${PASSWORD2}" sourcename="Log in ${username} ${password}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:29.018" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:04:29.018" endtime="20220531 03:04:29.218"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:29.218" level="INFO">Typing text 'admin' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:04:29.218" endtime="20220531 03:04:29.388"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:29.388" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<msg timestamp="20220531 03:04:29.447" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:04:29.518" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:04:29.388" endtime="20220531 03:04:29.526"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:29.526" level="INFO">Clicking element '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:04:29.526" endtime="20220531 03:04:29.891"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:29.010" endtime="20220531 03:04:29.891"/>
+</kw>
+<kw name="Search by title ${TITLE}" sourcename="Search by title ${booktitle}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:29.891" level="INFO">Clicking element 'xpath:/html/body/header/a[1]'.</msg>
+<status status="PASS" starttime="20220531 03:04:29.891" endtime="20220531 03:04:30.075"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="kereses"]</arg>
+<arg>${booktitle}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:30.075" level="INFO">Typing text 'Narnia krónikái: A végső ütközet' into text field '//*[@id="kereses"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:30.075" endtime="20220531 03:04:30.255"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="kereseskuldes"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:30.255" level="INFO">Clicking element '//*[@id="kereseskuldes"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:30.255" endtime="20220531 03:04:30.426"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:29.891" endtime="20220531 03:04:30.426"/>
+</kw>
+<kw name="Check if result contains book with isbn ${ISBN2}" sourcename="Check if result contains book with isbn ${isbn}">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id=${isbn}]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220531 03:04:30.458" level="INFO">Current page contains element '//*[@id=1234567890]'.</msg>
+<status status="PASS" starttime="20220531 03:04:30.426" endtime="20220531 03:04:30.458"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:30.426" endtime="20220531 03:04:30.458"/>
+</kw>
+<kw name="Log out">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaGomb"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:30.466" level="INFO">Clicking element '//*[@id="lenyiloListaGomb"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:30.458" endtime="20220531 03:04:30.554"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220531 03:04:30.554" endtime="20220531 03:04:30.594"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:30.594" level="INFO">Clicking element '//*[@id="lenyiloListaElem"]/a[4]'.</msg>
+<status status="PASS" starttime="20220531 03:04:30.594" endtime="20220531 03:04:30.806"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:30.458" endtime="20220531 03:04:30.806"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:29.010" endtime="20220531 03:04:30.806"/>
+</test>
+<test id="s1-t5" name="Remover book from store" line="47">
+<kw name="Log in ${USERNAME2} ${PASSWORD2}" sourcename="Log in ${username} ${password}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/header/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:30.814" level="INFO">Clicking element 'xpath:/html/body/header/a[2]'.</msg>
+<status status="PASS" starttime="20220531 03:04:30.814" endtime="20220531 03:04:31.030"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[1]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:31.030" level="INFO">Typing text 'admin' into text field '//*[@id="main"]/article/form/input[1]'.</msg>
+<status status="PASS" starttime="20220531 03:04:31.030" endtime="20220531 03:04:31.152"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[2]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:31.152" level="INFO">Typing password into text field '//*[@id="main"]/article/form/input[2]'.</msg>
+<msg timestamp="20220531 03:04:31.194" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220531 03:04:31.261" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220531 03:04:31.152" endtime="20220531 03:04:31.261"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main"]/article/form/input[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:31.261" level="INFO">Clicking element '//*[@id="main"]/article/form/input[3]'.</msg>
+<status status="PASS" starttime="20220531 03:04:31.261" endtime="20220531 03:04:31.560"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:30.814" endtime="20220531 03:04:31.560"/>
+</kw>
+<kw name="Remove a book">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="${ISBN2}"]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:31.568" level="INFO">Clicking element '//*[@id="1234567890"]/button'.</msg>
+<status status="PASS" starttime="20220531 03:04:31.568" endtime="20220531 03:04:31.656"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:31.560" endtime="20220531 03:04:31.656"/>
+</kw>
+<kw name="Check if result not contains book with isbn ${ISBN2}" sourcename="Check if result not contains book with isbn ${isbn}">
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>//*[@id=${isbn}]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20220531 03:04:31.688" level="INFO">Current page does not contain element '//*[@id=1234567890]'.</msg>
+<status status="PASS" starttime="20220531 03:04:31.656" endtime="20220531 03:04:31.688"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:31.656" endtime="20220531 03:04:31.688"/>
+</kw>
+<kw name="Log out">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaGomb"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:31.688" level="INFO">Clicking element '//*[@id="lenyiloListaGomb"]'.</msg>
+<status status="PASS" starttime="20220531 03:04:31.688" endtime="20220531 03:04:31.768"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220531 03:04:31.768" endtime="20220531 03:04:31.800"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="lenyiloListaElem"]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220531 03:04:31.800" level="INFO">Clicking element '//*[@id="lenyiloListaElem"]/a[4]'.</msg>
+<status status="PASS" starttime="20220531 03:04:31.800" endtime="20220531 03:04:32.154"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:31.688" endtime="20220531 03:04:32.154"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:30.814" endtime="20220531 03:04:32.154"/>
+</test>
+<kw name="Close the browser" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220531 03:04:32.162" endtime="20220531 03:04:34.348"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:32.162" endtime="20220531 03:04:34.348"/>
+</kw>
+<status status="PASS" starttime="20220531 03:04:13.865" endtime="20220531 03:04:34.348"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
